@@ -1,0 +1,34 @@
+#container{
+    width: 100vw;
+    height: 50vw;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.in-container{
+    color: aquamarine;
+    font-size: xx-large;
+
+}
+
+div{
+    border: 1px solid black;
+    min-height: 25px;
+    background-color: rgb(42, 80, 211);
+}
+
+#changeColorButton{
+    border: 5px solid #d10f0f;
+    background-color: #da5cc9;
+
+    position: center;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+    font-size: 20px;
+    cursor: pointer;
+
+}
