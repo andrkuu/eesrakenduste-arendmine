@@ -14,16 +14,27 @@ let time = document.querySelector('#time');
 let yearContainer = document.querySelector('#year');
 let monthContainer = document.querySelector('#month');
 let dateContainer = document.querySelector('#date');
-let days = ['Pühapäev', 'Esmaspäev', 'Teisipäev', 'Kolmapäev', 'Neljapäev', 'Reede', 'Laupäev'];;
-let months = ['Jaanuar', 'Veebruar']
+let days = ['Pühapäev', 'Esmaspäev', 'Teisipäev', 'Kolmapäev', 'Neljapäev', 'Reede', 'Laupäev'];
+let months = ['Jaanuar', 'Veebruar','Märts',"Aprill",'Mai','Juuni','Juuli','August','September','Oktoober','November','Detsember'];
+
+let clockFontColor = document.querySelector('#clockFontColor');
 
 yearContainer.innerHTML = year;
 monthContainer.innerHTML = months[month];
 dayContainer.innerHTML = days[day];
-dateContainer.innerHTML = date;
+dateContainer.innerHTML = date + " " + months[month] + ", " + days[day];
 updateClock();
 
 window.setInterval(updateClock, 1000);
+
+
+function changeClockFontColor(e){
+
+    time.style.color = clockFontColor.value
+    console.log(clockFontColor.value);
+}
+
+clockFontColor.addEventListener("onchange",changeClockFontColor);
 
 function updateClock(){
     d = new Date();
@@ -58,5 +69,4 @@ function changePosition(){
     dateContainer.style.alignSelf = alignPosition[Math.floor(Math.random()*3)];
 
 
-}
-*/
+}*/
